@@ -1,0 +1,17 @@
+# Use defaults
+$include /etc/inputrc
+
+# use vi
+set editing-mode vi
+set show-mode-in-prompt on
+set vi-ins-mode-string \1\e[6 q\2
+set vi-cmd-mode-string \1\e[4 q\2
+
+# Completion
+set colored-stats On
+set completion-ignore-case On
+set completion-prefix-display-length 6
+set mark-symlinked-directories On
+set show-all-if-ambiguous On
+set show-all-if-unmodified On
+set visible-stats On
