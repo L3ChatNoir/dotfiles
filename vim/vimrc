@@ -1,0 +1,49 @@
+set nocompatible
+
+if empty($XDG_STATE_HOME)  | let $XDG_STATE_HOME  = $HOME."/.local/state" | endif
+set viminfofile=$XDG_STATE_HOME/vim/viminfo " XDG Base Directories
+
+filetype on
+filetype plugin indent on
+syntax on
+
+" -- Cursor --
+set cursorline
+hi CursorLine term=bold cterm=bold guibg=Grey40
+"set cursorcolumn
+
+" -- NUMBER --
+set number
+set numberwidth=1
+"set relativenumber
+
+" -- RULER --
+set ruler
+
+" -- SEARCH --
+set hlsearch " Higlight all found items
+set incsearch " Incremental search
+set ignorecase
+set smartcase
+
+set visualbell
+set encoding=utf-8
+set modelines=0
+set wrap
+
+set smartindent
+set expandtab
+set wildmenu
+set wildmode=list:longest
+set hidden
+
+set showmode
+set showcmd
+set showmatch
+
+
+" PLUGINS ----------------------------------------------------------------
+
+" MAPPINGS ---------------------------------------------------------------
+
+" VIMSCRIPT --------------------------------------------------------------
