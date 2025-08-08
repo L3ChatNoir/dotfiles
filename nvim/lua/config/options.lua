@@ -11,6 +11,8 @@ vim.opt.expandtab = true
 
 -- Cursor --
 vim.opt.cursorline = true
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
 
 -- Number --
 vim.opt.number = true
@@ -45,3 +47,4 @@ vim.opt.showcmd = true
 vim.opt.showmatch = true
 
 -- MISC --
+vim.opt.mouse = 'a'

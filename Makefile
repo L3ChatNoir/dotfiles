@@ -12,6 +12,7 @@ all: install
 
 install: \
 	install-bash \
+	install-readline \
 	install-git \
 	install-neovim \
 	install-tmux \
@@ -20,6 +21,10 @@ install: \
 install-bash:
 	@echo -e '${COLOR_CYAN}==> BASH${COLOR_RESET}'
 	cp -v -a "./bash/." "${HOME}/"
+
+install-readline:
+	@echo -e '${COLOR_CYAN}==> READLINE${COLOR_RESET}'
+	rsync --archive --delete --verbose "readline" "${XDG_CONFIG_HOME}"
 
 install-git:
 	@echo -e '${COLOR_CYAN}==> GIT${COLOR_RESET}'
