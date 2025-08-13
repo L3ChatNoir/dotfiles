@@ -13,6 +13,7 @@ require('mini.diff').setup()
 require('mini.pairs').setup()           -- autopairs
 require('mini.trailspace').setup()      -- view trailspace
 require('mini.statusline').setup()
+
 local hipatterns = require('mini.hipatterns')
 hipatterns.setup({
   highlighters = {
@@ -59,6 +60,32 @@ require("mason").setup()
 --        -- YAML
 --        "yamllint",
 require('mason-lspconfig').setup()
+
+-- File explorer
+require("nvim-tree").setup({
+    view = {
+        width = 16,
+        side = 'right',
+        preserve_window_proportions = true,
+    },
+    renderer = {
+        full_name = false,
+        root_folder_label = ":t",
+        indent_markers = {
+            enable = true,
+            inline_arrows = false
+        },
+        icons = {
+            show = {
+                file = false,
+                folder = false,
+                folder_arrow = true,
+                git = true,
+            },
+            git_placement = 'after',
+        }
+    }
+})
 
 -- Colorsheme --
 vim.cmd("colorscheme carbonfox")

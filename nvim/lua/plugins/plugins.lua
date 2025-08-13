@@ -17,6 +17,8 @@ return {
 			g.ale_ruby_rubocop_auto_correct_all = 1
 		end
 	},
+    -- File explorer
+    {"nvim-tree/nvim-tree.lua"},
 	-- Treesitter
 	{
       "nvim-treesitter/nvim-treesitter",
