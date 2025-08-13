@@ -64,7 +64,7 @@ require('mason-lspconfig').setup()
 -- File explorer
 require("nvim-tree").setup({
     view = {
-        width = 16,
+        width = 32,
         side = 'right',
         preserve_window_proportions = true,
     },
