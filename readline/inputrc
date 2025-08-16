@@ -1,11 +1,16 @@
 # Use defaults
 $include /etc/inputrc
 
-# use vi
-set editing-mode vi
+# emacs or vi
+set editing-mode emacs
+
+# vi
 set show-mode-in-prompt on
 set vi-ins-mode-string \1\e[6 q\2
 set vi-cmd-mode-string \1\e[4 q\2
+
+# Emacs
+set emacs-mode-string \1\e[6 q\2
 
 # Completion
 set colored-stats On
