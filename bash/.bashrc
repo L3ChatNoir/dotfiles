@@ -57,6 +57,12 @@ export HISTTIMEFORMAT="%d/%m/%Y %H:%M:%S "
 # ALIAS
 #-------
 
+alias c='clear'
+
+# Editor
+alias e='nvim'
+alias v='nvim'
+
 # PACKAGE MANAGER
 alias install='sudo pacman -Syu'
 alias remove='sudo pacman -Rns'
