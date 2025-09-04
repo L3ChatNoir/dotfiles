@@ -1,3 +1,5 @@
+vim.api.nvim_create_augroup("AutoFormat", {})
+
 vim.api.nvim_create_autocmd("BufWritePost", {
     pattern = { "*.py" },
     desc = "Auto-format Python files after saving",
@@ -10,5 +12,15 @@ vim.api.nvim_create_autocmd("BufWritePost", {
         vim.cmd(":silent !docformatter --in-place --black " .. fileName)
         vim.cmd(":silent !ruff clean")
     end,
-    group = format,
+    group = "AutoFormat",
+})
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+    pattern = { "*.c", "*.h" },
+    desc = "Auto-format C files after saving",
+    callback = function()
+        local fileName = vim.api.nvim_buf_get_name(0)
+        vim.cmd(":silent !clang-format -i --fallback-style GNU --style file " .. fileName)
+    end,
+    group = "AutoFormat",
 })
