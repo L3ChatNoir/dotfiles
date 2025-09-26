@@ -1,0 +1,27 @@
+<type>(<optional scope>): <description>
+# 50ch wide ------------------------------------ |
+# Use Convential commit                          |
+# type:                                          |
+# feat, fix, refactor, perf, style               |
+# test, docs, build, ops, chore                  |
+# breaking change commit have '!' before ':'     |
+# summary use imperative. start upper case       |
+# don't end with a period                        |
+# ------ ↓ LEAVE BLANK LINE BEFORE BODY ↓ ------ |
+
+# 72ch wide ---------------------------------------------------------- |
+# Explain *what* and *why*. Include issues ids                         |
+# ---------------- ↓ LEAVE BLANK LINE BEFORE FOOTER ↓ ---------------- |
+
+# FOOTER:
+# BREAKING CHANGE:
+# Bug: #xxxx
+# Acked-by: Example User <user@example.com>
+# Cc: Example User <user@example.com>
+# Co-Authored-by: Example User <user@example.com>
+# Requested-by: Example User <user@example.com>
+# Reported-by: Example User <user@example.com>
+# Reviewed-by: Example User <user@example.com>
+# Suggested-by: Example User <user@example.com>
+# Tested-by: Example User <user@example.com>
+# Thanks: Example User <user@example.com

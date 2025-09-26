@@ -1,0 +1,49 @@
+[core]
+	editor = nvim
+    whitespace = trailing-space,space-before-tab
+    preloadIndex = true
+
+[commit]
+	template = /home/user/.config/git/gitmessage.txt
+
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
+
+[apply]
+    whitespace = fix
+
+[pager]
+	branch = false
+	log = false
+	shortlog = false
+	reflog = false
+
+[init]
+    defaultBranch = main
+
+[status]
+    relativePaths = false
+    branch = true
+    showStash = true
+    showUntrackedFiles = normal
+
+[pull]
+    ff = true
+	rebase = true
+
+[push]
+    # Don't create remote branch by mistake
+    autoSetupRemote = false
+
+[rebase]
+    missingCommitsCheck = warn
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[Include]
+    path = /home/user/.config/git/config-user
+
