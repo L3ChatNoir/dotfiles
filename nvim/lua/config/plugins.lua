@@ -51,9 +51,6 @@ require("mason").setup()
 --        "shellcheck",
 --        -- PYTHON
 --        "autoflake",
---        "autopep8",
---        "black",
---        "bandit",
 --        "isort",
 --        "pylint",
 --        "pyright",

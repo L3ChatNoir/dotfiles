@@ -22,6 +22,10 @@ install-bash:
 	@echo -e '${COLOR_CYAN}==> BASH${COLOR_RESET}'
 	cp -v -a "./bash/." "${HOME}/"
 
+install-ruff:
+	@echo -e '${COLOR_CYAN}==> RUFF${COLOR_RESET}'
+	rsync --archive --delete --verbose "ruff" "${XDG_CONFIG_HOME}"
+
 install-readline:
 	@echo -e '${COLOR_CYAN}==> READLINE${COLOR_RESET}'
 	rsync --archive --delete --verbose "readline" "${XDG_CONFIG_HOME}"
@@ -34,11 +38,9 @@ install-neovim:
 	@echo -e '${COLOR_CYAN}==> NVIM${COLOR_RESET}'
 	rsync --archive --delete --verbose "nvim" "${XDG_CONFIG_HOME}"
 
-
 install-tmux:
 	@echo -e '${COLOR_CYAN}==> TMUX${COLOR_RESET}'
 	rsync --archive --delete --verbose "tmux" "${XDG_CONFIG_HOME}"
-
 
 install-vim:
 	@echo -e '${COLOR_CYAN}==> VIM${COLOR_RESET}'

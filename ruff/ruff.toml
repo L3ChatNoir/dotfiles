@@ -1,0 +1,41 @@
+cache-dir = "~/.cache/ruff"
+fix = false
+fix-only = false
+indent-width = 4
+line-length = 79
+output-format = "full"
+preview = false
+respect-gitignore = false
+show-fixes = true
+
+[format]
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
+indent-style = "space"
+line-ending = "lf"
+preview = false
+quote-style = "double"
+skip-magic-trailing-comma = true
+
+[lint]
+fixable = ["ALL"]
+future-annotations = false
+preview = false
+select = ["E4", "E7", "E9", "D", "F", "I", "N", "W"]
+task-tags = ["TODO", "FIXME", "XXX", "HACK", "NOTE"]
+
+[lint.isort]
+case-sensitive = false
+combine-as-imports = false
+force-single-line = false
+from-first = false
+no-sections = false
+order-by-type = true
+relative-imports-order = "closest-to-furthest"
+section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
+split-on-trailing-comma = false
+
+
+[lint.pydocstyle]
+convention = "pep257"
+ignore-var-parameters = false

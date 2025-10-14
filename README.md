@@ -18,6 +18,7 @@ make
     + neovim
     + tmux
     + vim
+    + ruff
 
 ## Features
 

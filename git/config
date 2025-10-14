@@ -14,7 +14,7 @@
 
 [pager]
 	branch = false
-	log = false
+	log = true
 	shortlog = false
 	reflog = false
 
