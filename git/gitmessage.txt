@@ -1,18 +1,19 @@
-<type>(<optional scope>): <description>
+
+#<type>(<optional scope>): <description>
 # 50ch wide ------------------------------------ |
 # Use Convential commit                          |
 # type:                                          |
 # feat, fix, refactor, perf, style               |
 # test, docs, build, ops, chore                  |
 # breaking change commit have '!' before ':'     |
-# summary use imperative. start upper case       |
-# don't end with a period                        |
+# use imperative, start upper case               |
+# no period at the end                           |
 # ------ ↓ LEAVE BLANK LINE BEFORE BODY ↓ ------ |
-
+#
 # 72ch wide ---------------------------------------------------------- |
 # Explain *what* and *why*. Include issues ids                         |
 # ---------------- ↓ LEAVE BLANK LINE BEFORE FOOTER ↓ ---------------- |
-
+#
 # FOOTER:
 # BREAKING CHANGE:
 # Bug: #xxxx
