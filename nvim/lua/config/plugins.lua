@@ -11,6 +11,7 @@ require('mini.snippets').setup()
 require('mini.git').setup()
 require('mini.diff').setup()
 require('mini.pairs').setup()           -- autopairs
+require('mini.pick').setup()
 require('mini.trailspace').setup()      -- view trailspace
 require('mini.statusline').setup()
 
@@ -40,7 +41,9 @@ require('mini.tabline').setup({
     tabpage_section = 'right',
 })
 --]]
+
 -- LSP
+-- TODO: Use Native lSP
 require('lspconfig')
 require("mason").setup()
 --        -- ANSIBLE
