@@ -3,10 +3,6 @@ return {
 	{ "EdenEast/nightfox.nvim" },
 	-- Mini.nvim
 	{ "echasnovski/mini.nvim", version = false },
-	-- LSP
-    {"neovim/nvim-lspconfig"},
-    {"mason-org/mason.nvim"},
-    {"mason-org/mason-lspconfig.nvim"},
 	-- Lint
 	{
 		'dense-analysis/ale',

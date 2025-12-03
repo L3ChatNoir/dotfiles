@@ -1,4 +1,5 @@
 -- LAZY
+-- TODO: Remove lazy for built-in packer in 0.12
 require('plugins.lazy')
 
 -- MINI
@@ -41,25 +42,6 @@ require('mini.tabline').setup({
     tabpage_section = 'right',
 })
 --]]
-
--- LSP
--- TODO: Use Native lSP
-require('lspconfig')
-require("mason").setup()
---        -- ANSIBLE
---        "ansible-language-server",
---        "ansible-lint",
---        -- BASH
---        "bash-language-server",
---        "shellcheck",
---        -- PYTHON
---        "autoflake",
---        "isort",
---        "pylint",
---        "pyright",
---        -- YAML
---        "yamllint",
-require('mason-lspconfig').setup()
 
 -- File explorer
 require("nvim-tree").setup({

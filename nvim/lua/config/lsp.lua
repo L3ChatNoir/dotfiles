@@ -1,9 +1,8 @@
--- Python
-vim.lsp.config['ruff'] = {
-  -- Command and arguments to start the server.
-  cmd = { 'ruff', 'server' },
-  filetypes = { 'python' },
-  root_markers = { 'pyproject.toml', 'ruff.toml', '.ruff.toml', '.git' },
-  settings = {}
-}
 vim.lsp.enable('ruff')
+vim.lsp.enable('pyright')
+vim.lsp.enable('clangd')
+vim.lsp.enable('bashls')
+vim.lsp.enable('html')
+vim.lsp.enable('yamlls')
+vim.lsp.enable('marksman')
+vim.lsp.enable('lua-language-server')

@@ -16,9 +16,15 @@ make
     + bash-completion
     + git
     + neovim
+        * ruff
+        * clangd
+        * pyright
+        * bash-language-server
+        * vscode-html-languageserver
+        * yaml-language-server
+        * lua-language-server
     + tmux
     + vim
-    + ruff
 
 ## Features
 
