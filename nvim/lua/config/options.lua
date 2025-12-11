@@ -48,3 +48,7 @@ vim.opt.showmatch = true
 
 -- MISC --
 vim.opt.mouse = 'a'
+vim.diagnostic.config({
+    virtual_text=true,
+    severity_sort=true,
+})
