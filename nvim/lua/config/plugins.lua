@@ -12,7 +12,7 @@ require('mini.snippets').setup()
 require('mini.git').setup()
 require('mini.diff').setup()
 require('mini.pairs').setup()           -- autopairs
-require('mini.pick').setup()
+require('mini.pick').setup()            -- fuzzy finder file
 require('mini.trailspace').setup()      -- view trailspace
 require('mini.statusline').setup()
 
@@ -67,6 +67,39 @@ require("nvim-tree").setup({
             git_placement = 'after',
         }
     }
+})
+
+-- TreeSitter
+require("nvim-treesitter").setup({
+    highlight = { enable = true },
+    indent = { enable = true },
+    ensure_installed = {
+      "bash",
+      "c",
+      "diff",
+      "html",
+      "javascript",
+      "jsdoc",
+      "json",
+      "jsonc",
+      "lua",
+      "luadoc",
+      "luap",
+      "markdown",
+      "markdown_inline",
+      "printf",
+      "python",
+      "query",
+      "regex",
+      "toml",
+      "tsx",
+      "typst",
+      "typescript",
+      "vim",
+      "vimdoc",
+      "xml",
+      "yaml",
+  }
 })
 
 -- Colorsheme --

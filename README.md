@@ -23,6 +23,7 @@ make
         * vscode-html-languageserver
         * yaml-language-server
         * lua-language-server
+        * tinymist
     + tmux
     + vim
 
