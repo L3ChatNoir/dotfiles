@@ -1,8 +1,22 @@
--- LAZY
--- TODO: Remove lazy for built-in packer in 0.12
-require('plugins.lazy')
+-- Mini
 
--- MINI
+-- TODO: Remove mini.deps for built-in packer in 0.12
+-- Install with git for the use of deps
+local path_package = vim.fn.stdpath('data') .. '/site/'
+local mini_path = path_package .. 'pack/deps/start/mini.nvim'
+if not vim.loop.fs_stat(mini_path) then
+  vim.cmd('echo "Installing `mini.nvim`" | redraw')
+  local clone_cmd = {
+    'git', 'clone', '--filter=blob:none',
+    'https://github.com/nvim-mini/mini.nvim', mini_path
+  }
+  vim.fn.system(clone_cmd)
+  vim.cmd('packadd mini.nvim | helptags ALL')
+  vim.cmd('echo "Installed `mini.nvim`" | redraw')
+end
+
+require('mini.deps').setup()
+
 require('mini.icons').setup()
 require('mini.indentscope').setup()     -- view indentation
 require('mini.completion').setup()      -- autocompleton
@@ -42,65 +56,3 @@ require('mini.tabline').setup({
     tabpage_section = 'right',
 })
 --]]
-
--- File explorer
-require("nvim-tree").setup({
-    view = {
-        width = 32,
-        side = 'right',
-        preserve_window_proportions = true,
-    },
-    renderer = {
-        full_name = false,
-        root_folder_label = ":t",
-        indent_markers = {
-            enable = true,
-            inline_arrows = false
-        },
-        icons = {
-            show = {
-                file = false,
-                folder = false,
-                folder_arrow = true,
-                git = true,
-            },
-            git_placement = 'after',
-        }
-    }
-})
-
--- TreeSitter
-require("nvim-treesitter").setup({
-    highlight = { enable = true },
-    indent = { enable = true },
-    ensure_installed = {
-      "bash",
-      "c",
-      "diff",
-      "html",
-      "javascript",
-      "jsdoc",
-      "json",
-      "jsonc",
-      "lua",
-      "luadoc",
-      "luap",
-      "markdown",
-      "markdown_inline",
-      "printf",
-      "python",
-      "query",
-      "regex",
-      "toml",
-      "tsx",
-      "typst",
-      "typescript",
-      "vim",
-      "vimdoc",
-      "xml",
-      "yaml",
-  }
-})
-
--- Colorsheme --
-vim.cmd("colorscheme carbonfox")
