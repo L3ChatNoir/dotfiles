@@ -12,11 +12,16 @@ all: install
 
 install: \
 	install-bash \
+	install-alacritty \
 	install-readline \
 	install-git \
 	install-neovim \
 	install-tmux \
 	install-vim
+
+install-alacritty:
+	@echo -e '${COLOR_CYAN}==> ALACRITTY${COLOR_RESET}'
+	rsync --archive --delete --verbose "alacritty" "${XDG_CONFIG_HOME}"
 
 install-bash:
 	@echo -e '${COLOR_CYAN}==> BASH${COLOR_RESET}'

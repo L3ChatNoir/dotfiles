@@ -1,0 +1,87 @@
+[window]
+decorations = "None"
+startup_mode = "Maximized"
+
+[font]
+normal = { family = "Hack Nerd Font", style = "Regular" }
+size = 10
+offset = { x = 0, y = 0 }
+builtin_box_drawing = false
+
+[colors.primary]
+background = "#101010"
+foreground = "#F4F4F4"
+dim_foreground = "#CACACA"
+bright_foreground = "#FFFFFF"
+
+[colors.cursor]
+text = "#F4F4F4"
+cursor = "#CACACA"
+
+[colors.vi_mode_cursor]
+text = "#F4F4F4"
+cursor = "#875fff"
+
+[colors.search.matches]
+foreground = "#F4F4F4"
+background = "#666666"
+
+[colors.search.focused_match]
+foreground = "#F4F4F4"
+background = "#6050DC"
+
+[colors.footer_bar]
+foreground = "#F4F4F4"
+background = "#292929"
+
+[colors.hints.start]
+foreground = "#F4F4F4"
+background = "#6050DC"
+
+[colors.hints.end]
+foreground = "#F4F4F4"
+background = "#424242"
+
+[colors.selection]
+text = "#F4F4F4"
+background = "#292929"
+
+[colors.normal]
+black = "#292929"
+red = "#ee5396"
+green = "#90EE90"
+yellow = "#08bdba"
+blue = "#6050DC"
+magenta = "#875fff"
+cyan = "#33b1ff"
+white = "#E0E0E0"
+
+[colors.bright]
+black = "#666666"
+red = "#f16da6"
+green = "#BCF5BC"
+yellow = "#2dc7c4"
+blue = "#958AE8"
+magenta = "#B79FFF"
+cyan = "#52bdff"
+white = "#FFFFFF"
+
+[colors.dim]
+black = "#000000"
+red = "#ca4780"
+green = "#568F56"
+yellow = "#07a19e"
+blue = "#30286E"
+magenta = "#513999"
+cyan = "#2b96d9"
+white = "#ABABAB"
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+style = { shape = "Beam", blinking = "Off" }
+vi_mode_style = { shape = "Block", blinking = "Off" }
+unfocused_hollow = false
+
+
