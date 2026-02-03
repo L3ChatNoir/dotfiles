@@ -48,32 +48,32 @@ background = "#292929"
 
 [colors.normal]
 black = "#292929"
-red = "#ee5396"
+red = "#FF5577"
 green = "#90EE90"
-yellow = "#08bdba"
+yellow = "#FFDD60"
 blue = "#6050DC"
-magenta = "#875fff"
-cyan = "#33b1ff"
+magenta = "#875FFF"
+cyan = "#799FB6"
 white = "#E0E0E0"
 
 [colors.bright]
 black = "#666666"
-red = "#f16da6"
+red = "#FF9CB0"
 green = "#BCF5BC"
-yellow = "#2dc7c4"
+yellow = "#FFE18C"
 blue = "#958AE8"
 magenta = "#B79FFF"
-cyan = "#52bdff"
+cyan = "#AFC5D3"
 white = "#FFFFFF"
 
 [colors.dim]
 black = "#000000"
-red = "#ca4780"
+red = "#993347"
 green = "#568F56"
-yellow = "#07a19e"
+yellow = "#99853A"
 blue = "#30286E"
 magenta = "#513999"
-cyan = "#2b96d9"
+cyan = "#495F6D"
 white = "#ABABAB"
 
 [selection]

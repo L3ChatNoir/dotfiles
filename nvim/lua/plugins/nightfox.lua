@@ -4,16 +4,19 @@ MiniDeps.add({
 require('nightfox').setup({
     palettes = {
         carbonfox = {
+            red = "#FF5577",
+            green = "#90EE90",
+            yellow = "#FFDD60",
             blue = "#6050DC",
             magenta = "#875fff",
-            green = "#90EE90",
+            cyan = "#799FB6",
+            orange = "#FF9966",
 
             comment = "#7F7F7F",
 
             bg = "#000000",
             bg1 = "#101010",
             bg2 = "#292929",
-            -- bg3 = "#424242",
             bg3 = "#292929",
             bg4 = "#666666",
 
