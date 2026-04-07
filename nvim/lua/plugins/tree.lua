@@ -1,5 +1,5 @@
-MiniDeps.add({
-    source='nvim-tree/nvim-tree.lua'
+vim.pack.add({
+    { src = 'https://github.com/nvim-tree/nvim-tree.lua' }
 })
 
 require("nvim-tree").setup({

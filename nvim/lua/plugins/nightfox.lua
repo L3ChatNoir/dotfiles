@@ -1,6 +1,7 @@
-MiniDeps.add({
-    source='EdenEast/nightfox.nvim'
+vim.pack.add({
+    { src="https://github.com/EdenEast/nightfox.nvim" }
 })
+
 require('nightfox').setup({
     palettes = {
         carbonfox = {
@@ -27,14 +28,3 @@ require('nightfox').setup({
         }
     }
 })
-
--- Other colorscheme
--- MiniDeps.add({
---     source="nyoom-engineering/oxocarbon.nvim"
--- })
--- MiniDeps.add({
---     source='daltonmenezes/aura-theme',
--- })
---
--- local path = MiniDeps.config.path.package .. '/pack/deps/opt/aura-theme'
--- vim.opt.runtimepath:append(path .. '/packages/neovim')

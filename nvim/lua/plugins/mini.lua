@@ -1,28 +1,15 @@
 -- Mini
 
--- TODO: Remove mini.deps for built-in packer in 0.12
--- Install with git for the use of deps
-local path_package = vim.fn.stdpath('data') .. '/site/'
-local mini_path = path_package .. 'pack/deps/start/mini.nvim'
-if not vim.loop.fs_stat(mini_path) then
-  vim.cmd('echo "Installing `mini.nvim`" | redraw')
-  local clone_cmd = {
-    'git', 'clone', '--filter=blob:none',
-    'https://github.com/nvim-mini/mini.nvim', mini_path
-  }
-  vim.fn.system(clone_cmd)
-  vim.cmd('packadd mini.nvim | helptags ALL')
-  vim.cmd('echo "Installed `mini.nvim`" | redraw')
-end
-
-require('mini.deps').setup()
+vim.pack.add({
+    { src="https://github.com/nvim-mini/mini.nvim" }
+})
 
 require('mini.icons').setup()
 require('mini.indentscope').setup()     -- view indentation
-require('mini.completion').setup()      -- autocompleton
+require('mini.completion').setup()      -- autocompletion
+require('mini.snippets').setup()        -- autocompletion snippets
 require('mini.comment').setup()         -- comment using 'gcc'
 require('mini.cursorword').setup()      -- cursorline :
-require('mini.snippets').setup()
 require('mini.git').setup()
 require('mini.diff').setup()
 require('mini.pairs').setup()           -- autopairs
