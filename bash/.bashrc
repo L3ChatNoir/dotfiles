@@ -48,5 +48,5 @@ alias plz='sudo'
 alias please='sudo'
 
 # COLORS
-alias ls='ls --color=auto'
+alias ls='ls --almost-all --color=auto'
 alias grep='grep --color=auto'
