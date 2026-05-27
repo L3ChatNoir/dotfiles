@@ -16,6 +16,19 @@ require('mini.pairs').setup()           -- autopairs
 require('mini.pick').setup()            -- fuzzy finder file
 require('mini.trailspace').setup()      -- view trailspace
 require('mini.statusline').setup()
+require('mini.files').setup({
+    options = {
+        permanent_delete = false,
+    },
+    windows = {
+        preview= true,
+    }
+})
+require('mini.notify').setup({
+    lsp_progress = {
+        enable = false,
+}
+})
 
 local hipatterns = require('mini.hipatterns')
 hipatterns.setup({
