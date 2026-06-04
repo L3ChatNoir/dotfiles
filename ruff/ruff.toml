@@ -21,7 +21,7 @@ skip-magic-trailing-comma = true
 fixable = ["ALL"]
 future-annotations = false
 preview = false
-select = ["E4", "E7", "E9", "D", "F", "I", "N", "W"]
+select = ["E4", "E7", "E9", "D", "F", "I", "N", "W", "ANN"]
 task-tags = ["TODO", "FIXME", "XXX", "HACK", "NOTE"]
 
 [lint.isort]
