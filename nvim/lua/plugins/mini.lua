@@ -14,7 +14,17 @@ require('mini.git').setup()
 require('mini.diff').setup()
 require('mini.pairs').setup()           -- autopairs
 require('mini.pick').setup()            -- fuzzy finder file
-require('mini.trailspace').setup()      -- view trailspace
+
+vim.keymap.set("n", "<leader>f", ":Pick files<CR>", { desc = 'Open file finder' })
+vim.keymap.set("n", "<leader>b", ":Pick buffers<CR>", { desc = 'Open buffers finder' })
+vim.keymap.set("n", "<leader>g", ":Pick grep_live<CR>", { desc = 'Open buffers finder' })
+
+require("mini.extra").setup()           -- extra
+
+vim.keymap.set("n", "<leader>d", function() MiniExtra.pickers.diagnostic() end, { desc = "Mini Picker Diagnostics" })
+vim.keymap.set("n", "<leader>k", function() MiniExtra.pickers.keymaps() end, { desc = 'Search keymaps' })
+
+require('mini.trailspace').setup()      -- view trailspace TODO: Use hipatterns to show and auto_cmd to trim
 require('mini.statusline').setup()
 require('mini.files').setup({
     options = {
@@ -24,6 +34,12 @@ require('mini.files').setup({
         preview= true,
     }
 })
+
+local minifiles_toggle = function(...)
+    if not MiniFiles.close() then MiniFiles.open(...) end
+end
+vim.keymap.set("n", "<leader>t", minifiles_toggle, { desc = 'Open/Close file explorer' })
+
 require('mini.notify').setup({
     lsp_progress = {
         enable = false,
@@ -43,16 +59,3 @@ hipatterns.setup({
     hex_color = hipatterns.gen_highlighter.hex_color(),
   },
 })
---[[ Mini tabline don't support to move buffer, so don't use now
-require('mini.tabline').setup({
-    -- Show file icons (requires 'mini.icons')
-    show_icons = true,
-
-    -- Function which formats the tab label
-    format = nil,
-
-    -- Where to show tabpage
-    -- values: 'left', 'right', 'none'
-    tabpage_section = 'right',
-})
---]]
