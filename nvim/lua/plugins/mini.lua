@@ -17,7 +17,8 @@ require('mini.pick').setup()            -- fuzzy finder file
 
 vim.keymap.set("n", "<leader>f", ":Pick files<CR>", { desc = 'Open file finder' })
 vim.keymap.set("n", "<leader>b", ":Pick buffers<CR>", { desc = 'Open buffers finder' })
-vim.keymap.set("n", "<leader>g", ":Pick grep_live<CR>", { desc = 'Open buffers finder' })
+vim.keymap.set("n", "<leader>g", ":Pick grep_live<CR>", { desc = 'Open ripgrep finder' })
+vim.keymap.set("n", "<leader>k", ":Pick keymaps<CR>", { desc = 'Open keymap finder' })
 
 require("mini.extra").setup()           -- extra
 
