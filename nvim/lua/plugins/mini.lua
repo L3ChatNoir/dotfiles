@@ -8,7 +8,7 @@ require('mini.icons').setup()
 require('mini.indentscope').setup()     -- view indentation
 require('mini.completion').setup()      -- autocompletion
 require('mini.snippets').setup()        -- autocompletion snippets
-require('mini.comment').setup()         -- comment using 'gcc'
+--require('mini.comment').setup()         -- comment using 'gcc' --Use builtin comment 'gcc'
 require('mini.cursorword').setup()      -- cursorline :
 require('mini.git').setup()
 require('mini.diff').setup()
