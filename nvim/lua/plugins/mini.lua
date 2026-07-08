@@ -25,7 +25,7 @@ require("mini.extra").setup()           -- extra
 vim.keymap.set("n", "<leader>d", function() MiniExtra.pickers.diagnostic() end, { desc = "Mini Picker Diagnostics" })
 vim.keymap.set("n", "<leader>k", function() MiniExtra.pickers.keymaps() end, { desc = 'Search keymaps' })
 
-require('mini.trailspace').setup()      -- view trailspace TODO: Use hipatterns to show and auto_cmd to trim
+require('mini.trailspace').setup()
 require('mini.statusline').setup()
 require('mini.files').setup({
     options = {
@@ -48,6 +48,7 @@ require('mini.notify').setup({
 })
 
 local hipatterns = require('mini.hipatterns')
+--vim.api.nvim_set_hl(0, 'MiniHipatternsTrailingSpace', { default = true, bg="#FF5577" })
 hipatterns.setup({
   highlighters = {
     -- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
@@ -58,5 +59,8 @@ hipatterns.setup({
 
     -- Highlight hex color strings (`#rrggbb`) using that color
     hex_color = hipatterns.gen_highlighter.hex_color(),
+
+    -- Highlight trailing spaces
+    -- trailspace =   { pattern = '%f[%s]%s*$', group = 'MiniHipatternsTrailingSpace' },
   },
 })

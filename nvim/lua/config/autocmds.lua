@@ -21,3 +21,14 @@ vim.api.nvim_create_autocmd("BufWritePost", {
     end,
     group = "AutoFormat",
 })
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = { "*" },
+    desc = "Trim trailing whitespace on save",
+    callback = function()
+        local save = vim.fn.winsaveview()
+        vim.cmd([[keeppatterns %s/\s\+$//e]])
+        vim.fn.winrestview(save)
+    end,
+    group = "AutoFormat",
+})
