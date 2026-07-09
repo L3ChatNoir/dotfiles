@@ -46,6 +46,6 @@ vim.opt.showmatch = true
 
 -- MISC ##################################
 vim.diagnostic.config({
-    virtual_text=true,
-    severity_sort=true,
+    virtual_text = true,
+    severity_sort = true,
 })

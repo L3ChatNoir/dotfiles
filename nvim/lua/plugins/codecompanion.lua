@@ -1,8 +1,8 @@
 vim.pack.add({ "https://www.github.com/nvim-lua/plenary.nvim" })
-vim.pack.add({{
-  src = "https://www.github.com/olimorris/codecompanion.nvim",
-  version = vim.version.range("^19.0.0")
-}})
+vim.pack.add({ {
+    src = "https://www.github.com/olimorris/codecompanion.nvim",
+    version = vim.version.range("^19.0.0")
+} })
 
 require("codecompanion").setup({
     interactions = {
@@ -30,10 +30,10 @@ require("codecompanion").setup({
             window = {
                 position = "right",
             },
-        fold_context = true,
-        fold_reasoning = true,
-        show_reasoning = true,
-}
+            fold_context = true,
+            fold_reasoning = true,
+            show_reasoning = true,
+        }
     }
 })
 
