@@ -1,16 +1,27 @@
 vim.pack.add({ "https://www.github.com/nvim-lua/plenary.nvim" })
-vim.pack.add({ {
+vim.pack.add({{
   src = "https://www.github.com/olimorris/codecompanion.nvim",
   version = vim.version.range("^19.0.0")
-} })
+}})
 
--- Somewhere in your config
 require("codecompanion").setup({
     interactions = {
         chat = {
             adapter = {
-                name = "gemini",
-                model = "gemini-3-flash-preview"
+                -- name = "gemini",
+                -- model = "gemini-3-flash-preview"
+                name = "openrouter",
+                model = "cohere/north-mini-code:free",
+            },
+            slash_commands = {
+                ["file"] = {
+                    opts = {
+                        provider = "mini_pick",
+                    },
+                },
+            },
+            opts = {
+                completion_provider = "default",
             },
         }
     },
@@ -18,8 +29,11 @@ require("codecompanion").setup({
         chat = {
             window = {
                 position = "right",
-            }
-        }
+            },
+        fold_context = true,
+        fold_reasoning = true,
+        show_reasoning = true,
+}
     }
 })
 
